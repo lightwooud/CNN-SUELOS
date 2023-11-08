@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+
+{% block title %}Profile{% endblock %}
+ 
+{% block content %}
+
+
+<body>
+    <h1>Perfil</h1>
+    <div>
+    
+        <p>detalles de tu cuenta:</p>
+        <table>
+            <tr>
+                <td>Nombre:</td>
+                <td>{{ account['fullname'] }}</td>
+            </tr>
+            <tr>
+                <td>Username:</td>
+                <td>{{ account['username'] }}</td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>{{ account['email'] }}</td>
+            </tr>
+        
+        </table>
+        <a href="/edit" class="btn btn-secondary btn-sm">edit</a>
+        
+    </div>
+    
+</body>
+
+{% endblock %}
